@@ -15,6 +15,9 @@ class Motor():
     #     self.t.start()
 
     def set_power(self, power):
+        self.pwm_pin.__init__(self.pwm_pin.channel)
+        self.pwm_pin.pulse_width_percent(power)
+
         if power >= 0:
             direction = 0
         elif power < 0:

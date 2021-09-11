@@ -10,6 +10,7 @@ class PWM(I2C):
     REG_ARR = 0x44
     ADDR = 0x14
     CLOCK = 72000000
+    channel = 0
 
     def __init__(self, channel):
         super().__init__()
